@@ -325,7 +325,6 @@ img#title {
     display: none;
 }
 
-
 .callout {
   position: relative;
   border-radius: 12px;
@@ -339,38 +338,27 @@ img#title {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Azul: rgb(15, 52, 128) */
 .callout.blue {
-  border-left-color: #3b82f6; /* azul */
-  color: #1e3a8a;
+  border-left-color: rgb(15, 52, 128);
+  color: rgb(15, 52, 128);
 }
 
+/* Rosa: #a14a3f */
 .callout.pink {
-  border-left-color: #ec4899; /* rosa */
-  color: #831843;
+  border-left-color: #a14a3f;
+  color: #a14a3f;
   font-style: italic;
 }
 
-.callout::before {
-  content: attr(data-label);
-  position: absolute;
-  top: 1rem;
-  left: 1.5rem;
-  font-weight: 600;
-  font-size: 0.9rem;
-  background: #fff;
-  padding: 0 0.5rem;
-  color: inherit;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
-  user-select: none;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* Removido o ::before que exibia o nome do callout */
 
+/* Hover */
 .callout:hover {
   box-shadow: 0 6px 15px rgb(0 0 0 / 0.1);
   background-color: #f5faff;
 }
 
 .callout.pink:hover {
-  background-color: #fff0f6;
+  background-color: #f9ebe9;
 }
