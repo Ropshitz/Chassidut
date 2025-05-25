@@ -325,44 +325,52 @@ img#title {
     display: none;
 }
 
+
 .callout {
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
-  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
-  font-family: 'Georgia', serif;
-  font-size: 1.1rem;
-  line-height: 1.4;
   position: relative;
-  border: 3px solid transparent;
+  border-radius: 12px;
+  padding: 1.4rem 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  border-left: 6px solid transparent;
+  background: #fff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Caixinha azul */
 .callout.blue {
-  background: linear-gradient(135deg, #cce4ff 0%, #99c2ff 100%);
-  border-color: #3b82f6;
+  border-left-color: #3b82f6; /* azul */
   color: #1e3a8a;
 }
 
-/* Caixinha rosa */
 .callout.pink {
-  background: linear-gradient(135deg, #ffd6e8 0%, #ff99c1 100%);
-  border-color: #ec4899;
+  border-left-color: #ec4899; /* rosa */
   color: #831843;
   font-style: italic;
 }
 
-/* Para colocar um título ou ícone no topo esquerdo da caixinha */
 .callout::before {
   content: attr(data-label);
   position: absolute;
-  top: -0.9rem;
-  left: 1rem;
-  font-weight: bold;
+  top: 1rem;
+  left: 1.5rem;
+  font-weight: 600;
   font-size: 0.9rem;
-  padding: 0 0.4rem;
-  background: white;
-  border-radius: 4px;
+  background: #fff;
+  padding: 0 0.5rem;
+  color: inherit;
+  border-radius: 8px;
   box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
   user-select: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.callout:hover {
+  box-shadow: 0 6px 15px rgb(0 0 0 / 0.1);
+  background-color: #f5faff;
+}
+
+.callout.pink:hover {
+  background-color: #fff0f6;
 }
