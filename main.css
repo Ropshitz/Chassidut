@@ -326,28 +326,43 @@ img#title {
 }
 
 .callout {
-  padding: 1rem 1.5rem;
-  border-left: 5px solid;
-  margin: 1.5rem 0;
-  background-color: #f9f9f9;
   border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
   font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  position: relative;
+  border: 3px solid transparent;
 }
 
-/* Azul para textos em hebraico */
-.callout.hebrew {
-  border-color: #3b82f6;       /* azul vibrante */
-  background-color: #e0f0ff;   /* azul clarinho */
-  color: #1e3a8a;              /* azul escuro */
-  direction: rtl;              /* direita para esquerda */
-  text-align: right;
-  font-family: 'David Libre', serif; /* se tiver essa fonte carregada */
+/* Caixinha azul */
+.callout.blue {
+  background: linear-gradient(135deg, #cce4ff 0%, #99c2ff 100%);
+  border-color: #3b82f6;
+  color: #1e3a8a;
 }
 
-/* Rosa para histórias chassídicas */
-.callout.chassidic {
-  border-color: #ec4899;       /* rosa vibrante */
-  background-color: #ffe5f0;   /* rosa clarinho */
-  color: #831843;              /* rosa escuro */
+/* Caixinha rosa */
+.callout.pink {
+  background: linear-gradient(135deg, #ffd6e8 0%, #ff99c1 100%);
+  border-color: #ec4899;
+  color: #831843;
   font-style: italic;
+}
+
+/* Para colocar um título ou ícone no topo esquerdo da caixinha */
+.callout::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -0.9rem;
+  left: 1rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 0 0.4rem;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+  user-select: none;
 }
