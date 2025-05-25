@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test Callouts</title>
+  <style>
+    .callout {
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+      font-family: 'Georgia', serif;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      position: relative;
+      border: 3px solid transparent;
+    }
+    .callout.blue {
+      background: linear-gradient(135deg, #cce4ff 0%, #99c2ff 100%);
+      border-color: #3b82f6;
+      color: #1e3a8a;
+    }
+    .callout.pink {
+      background: linear-gradient(135deg, #ffd6e8 0%, #ff99c1 100%);
+      border-color: #ec4899;
+      color: #831843;
+      font-style: italic;
+    }
+    .callout::before {
+      content: attr(data-label);
+      position: absolute;
+      top: -0.9rem;
+      left: 1rem;
+      font-weight: bold;
+      font-size: 0.9rem;
+      padding: 0 0.4rem;
+      background: white;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="callout blue" data-label="Hebraico">
+    בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ
+  </div>
+
+  <div class="callout pink" data-label="História Chassídica">
+    Quando o Rebe de Kotzk foi perguntado “onde está D'us?”, ele respondeu: “Onde o deixam entrar.”
+  </div>
+
+</body>
+</html>
